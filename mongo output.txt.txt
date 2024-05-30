@@ -1,0 +1,179 @@
+1.
+test> use mydatabase
+switched to db mydatabase
+mydatabase> db.customer.find()
+mydatabase> db.customer.find()
+[
+  {
+    _id: ObjectId('665834de3e8cb643844e7448'),
+    name: 'John',
+    address: 'Highway 37'
+  }
+]
+
+
+2.
+
+
+mydatabase> use demo2
+switched to db demo2
+demo2> db.employee.find()
+[
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c68'),
+    name: 'Amy',
+    address: 'Apple st 652'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c69'),
+    name: 'Hannah',
+    address: 'Mountain 21'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6a'),
+    name: 'Michael',
+    address: 'Valley 345'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6b'),
+    name: 'Sandy',
+    address: 'Ocean blvd 2'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6c'),
+    name: 'Betty',
+    address: 'Green Grass 1'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6d'),
+    name: 'Richard',
+    address: 'Sky st 331'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6e'),
+    name: 'Susan',
+    address: 'One way 98'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c6f'),
+    name: 'Vicky',
+    address: 'Yellow Garden 2'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c70'),
+    name: 'Ben',
+    address: 'Park Lane 38'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c71'),
+    name: 'William',
+    address: 'Central st 954'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c72'),
+    name: 'Chuck',
+    address: 'Main Road 989'
+  },
+  {
+    _id: ObjectId('665835d32fabaf7a3b634c73'),
+    name: 'Viola',
+    address: 'Sideway 1633'
+  }
+]
+
+
+
+3.
+
+{'_id': ObjectId('66588f404fa3756786d7b39f'), 'id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': ObjectId('66588f404fa3756786d7b3a0'), 'id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': ObjectId('66588f404fa3756786d7b3a1'), 'id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': ObjectId('66588f404fa3756786d7b3a2'), 'id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('66588f404fa3756786d7b3a3'), 'id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('66588f404fa3756786d7b3a4'), 'id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('66588f404fa3756786d7b3a5'), 'id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('66588f404fa3756786d7b3a6'), 'id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('66588f404fa3756786d7b3a7'), 'id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('66588f404fa3756786d7b3a8'), 'id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('66588f404fa3756786d7b3a9'), 'id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('66588f404fa3756786d7b3aa'), 'id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': ObjectId('66588f404fa3756786d7b3ab'), 'id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('66588f404fa3756786d7b3ac'), 'id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+
+
+4.
+{'name': 'John', 'address': 'Highway 37'}
+{'name': 'Peter', 'address': 'Lowstreet 27'}
+{'name': 'Amy', 'address': 'Apple st 652'}
+{'name': 'Hannah', 'address': 'Mountain 21'}
+{'name': 'Michael', 'address': 'Valley 345'}
+{'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'name': 'Betty', 'address': 'Green Grass 1'}
+{'name': 'Richard', 'address': 'Sky st 331'}
+{'name': 'Susan', 'address': 'One way 98'}
+{'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'name': 'Ben', 'address': 'Park Lane 38'}
+{'name': 'William', 'address': 'Central st 954'}
+{'name': 'Chuck', 'address': 'Main Road 989'}
+{'name': 'Viola', 'address': 'Sideway 1633'}
+
+5.
+
+{'_id': ObjectId('665835d32fabaf7a3b634c70'), 'name': 'Ben', 'address': 'Park Lane 38'}
+
+
+6.
+
+{'_id': ObjectId('66589ebaaa4731c2f2408664'), 'id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('66589ebaaa4731c2f2408667'), 'id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('66589ebaaa4731c2f2408669'), 'id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('66589ebaaa4731c2f240866d'), 'id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+
+
+7.
+{'_id': ObjectId('66589ebaaa4731c2f2408667'), 'id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('66589ebaaa4731c2f240866d'), 'id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+
+
+
+8.
+{'_id': ObjectId('66588fe8754036d8f371b0f8'), 'id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': ObjectId('66588fe8754036d8f371b100'), 'id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('66588fe8754036d8f371b0fc'), 'id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('66588fe8754036d8f371b102'), 'id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('66588fe8754036d8f371b0f9'), 'id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('66588fe8754036d8f371b0f6'), 'id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': ObjectId('66588fe8754036d8f371b0fa'), 'id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('66588fe8754036d8f371b0f7'), 'id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': ObjectId('66588fe8754036d8f371b0fd'), 'id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('66588fe8754036d8f371b0fb'), 'id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('66588fe8754036d8f371b0fe'), 'id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('66588fe8754036d8f371b0ff'), 'id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('66588fe8754036d8f371b103'), 'id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': ObjectId('66588fe8754036d8f371b101'), 'id': 12, 'name': 'William', 'address': 'Central st 954'}
+
+
+9.
+{'_id': ObjectId('66588fe8754036d8f371b101'), 'id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': ObjectId('66588fe8754036d8f371b103'), 'id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': ObjectId('66588fe8754036d8f371b0ff'), 'id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('66588fe8754036d8f371b0fe'), 'id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('66588fe8754036d8f371b0fb'), 'id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('66588fe8754036d8f371b0fd'), 'id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('66588fe8754036d8f371b0f7'), 'id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': ObjectId('66588fe8754036d8f371b0fa'), 'id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('66588fe8754036d8f371b0f6'), 'id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': ObjectId('66588fe8754036d8f371b0f9'), 'id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('66588fe8754036d8f371b102'), 'id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('66588fe8754036d8f371b0fc'), 'id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('66588fe8754036d8f371b100'), 'id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('66588fe8754036d8f371b0f8'), 'id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+
+
+
+10.
+
+14 document deleted
+
+11.
+2 document upadted
