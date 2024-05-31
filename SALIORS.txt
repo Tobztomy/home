@@ -1,0 +1,157 @@
+SQL> CREATE TABLE SAILORS(sid NUMBER(10) PRIMARY KEY, sname VARCHAR2(25),rating NUMBER(10,2),age NUMBER(2));
+
+Table created.
+
+SQL>  INSERT INTO SAILORS VALUES(22,'Dustin',7,45);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(29,'Brutas',1,33);
+
+1 row created.
+
+SQL>  INSERT INTO SAILORS VALUES(31,'Lubber',8,55);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(32,'Andy',8,25);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(58,'Rusty',10,35);
+
+1 row created.
+
+SQL>  INSERT INTO SAILORS VALUES(64,'Horatio',7,35);
+
+1 row created.
+
+SQL>  INSERT INTO SAILORS VALUES(71,'Zorba',10,16);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(74,'Horatio',9,35);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(85,'Art',3,26);
+
+1 row created.
+
+SQL> INSERT INTO SAILORS VALUES(95,'Bob',3,64);
+
+1 row created.
+
+
+SQL> SELECT * FROM SAILORS;
+
+       SID SNAME                         RATING        AGE
+---------- ------------------------- ---------- ----------
+        22 Dustin                             7         45
+        29 Brutas                             1         33
+        31 Lubber                             8         55
+        32 Andy                               8         25
+        58 Rusty                             10         35
+        64 Horatio                            7         35
+        71 Zorba                             10         16
+        74 Horatio                            9         35
+        85 Art                                3         26
+        95 Bob                                3         64
+
+10 rows selected.
+
+
+
+
+SQL> CREATE TABLE BOATS(bid NUMBER(10) PRIMARY KEY, bname VARCHAR2(25),color VARCHAR2(25));
+
+Table created.
+
+SQL> INSERT INTO BOATS VALUES(101,'Interlake','Blue');
+
+1 row created.
+
+SQL> INSERT INTO BOATS VALUES(102,'Interlake','Red');
+
+1 row created.
+
+SQL> INSERT INTO BOATS VALUES(103,'Clipper','Green');
+
+1 row created.
+
+SQL> INSERT INTO BOATS VALUES(104,'Marine','Red');
+
+1 row created.
+
+SQL> SELECT * FROM BOATS;
+
+       BID BNAME                     COLOR
+---------- ------------------------- -------------------------
+       101 Interlake                 Blue
+       102 Interlake                 Red
+       103 Clipper                   Green
+       104 Marine                    Red
+
+
+
+
+SQL> CREATE TABLE RESERVES(sid INT REFERENCES SAILORS(sid), bid INT REFERENCES BOATS(bid),day DATE);
+
+Table created.
+
+SQL> INSERT INTO RESERVES VALUES(22,101,'10/oct/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(22,102,'10/oct/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(22,103,'10/aug/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(22,104,'10/jul/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(31,102,'11/oct/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(31,103,'11/jun/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(31,104,'11/dec/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(64,101,'09/may/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(64,102,'09/aug/98');
+
+1 row created.
+
+SQL> INSERT INTO RESERVES VALUES(74,103,'09/aug/98');
+
+1 row created.
+
+SQL> SELECT * FROM RESERVES;
+
+       SID        BID DAY
+---------- ---------- ---------
+        22        101 10-OCT-98
+        22        102 10-OCT-98
+        22        103 10-AUG-98
+        22        104 10-JUL-98
+        31        102 11-OCT-98
+        31        103 11-JUN-98
+        31        104 11-DEC-98
+        64        101 09-MAY-98
+        64        102 09-AUG-98
+        74        103 09-AUG-98
+
+10 rows selected.
