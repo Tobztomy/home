@@ -1,0 +1,57 @@
+
+create user
+oem@oem-desktop:~$ sudo adduser tobz
+[sudo] password for oem: 
+Adding user `tobz' ...
+Adding new group `tobz' (1000) ...
+Adding new user `tobz' (1000) with group `tobz' ...
+Creating home directory `/home/tobz' ...
+Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for tobz
+Enter the new value, or press ENTER for the default
+	Full Name []:           
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+
+creating groups and adding users
+oem@oem-desktop:~$ sudo groupadd test 
+oem@oem-desktop:~$ sudo usermod -aG test tobu
+oem@oem-desktop:~$ grep test /etc/group
+test:x:1002:tobu
+
+
+
+delete a user
+oem@oem-desktop:~$ sudo deluser tobz
+Removing user `tobz' ...
+Warning: group `tobz' has no more members.
+Done.
+
+create a group with specific group id
+oem@oem-desktop:~$ sudo groupadd -g 1001 demo1
+[sudo] password for oem:
+
+change group id
+oem@oem-desktop:~$ sudo groupmod -g 1002 demo1
+
+rename a group
+oem@oem-desktop:~$ sudo groupmod -n test demo1
+
+remove user from a group
+oem@oem-desktop:~$ sudo gpasswd -d tobz1 test
+Removing user tobz1 from group test
+
+information about group test
+oem@oem-desktop:~$ grep test /etc/group
+test:x:1002:
+
+delete group
+oem@oem-desktop:~$ sudo groupdel student
+
